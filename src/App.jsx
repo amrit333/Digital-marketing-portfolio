@@ -63,6 +63,39 @@ export default function App() {
               <a href="#automation" className="btn btn-primary">Try Automation Demo</a>
               <a href="#contact" className="btn btn-secondary">Book Growth Session</a>
             </div>
+            <div style={styles.heroContactRow}>
+              <a
+                href="https://drive.google.com/file/d/10BDaCvF14NrWOMfHKzajatG_sb1K9WyR/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                style={styles.heroContactPill}
+                className="hero-contact-pill"
+              >
+                <span style={{ ...styles.heroContactDot, background: '#0084ff' }} />
+                <i className="fa-solid fa-file-arrow-down" style={{ color: '#0084ff', fontSize: '13px' }}></i>
+                Download CV
+              </a>
+              <a
+                href="https://wa.me/918544926441"
+                target="_blank"
+                rel="noreferrer"
+                style={styles.heroContactPill}
+                className="hero-contact-pill"
+              >
+                <span style={{ ...styles.heroContactDot, background: '#25D366' }} />
+                <i className="fa-brands fa-whatsapp" style={{ color: '#25D366', fontSize: '13px' }}></i>
+                +91 85449-26441
+              </a>
+              <a
+                href="mailto:jot60103@gmail.com"
+                style={styles.heroContactPill}
+                className="hero-contact-pill"
+              >
+                <span style={{ ...styles.heroContactDot, background: '#E1306C' }} />
+                <i className="fa-solid fa-envelope" style={{ color: '#E1306C', fontSize: '13px' }}></i>
+                jot60103@gmail.com
+              </a>
+            </div>
           </div>
           
           <div style={styles.heroVisual} className="float-anim">
@@ -251,11 +284,63 @@ export default function App() {
             
             {/* Left Col - Bot Funnel */}
             <div style={styles.contactInfoCol}>
-              <span style={styles.contactBadge}>INTELLIGENT FORM</span>
+              <span style={styles.contactBadge}>GET IN TOUCH</span>
               <h2 style={styles.contactTitle}>Ready to Automate Your Business?</h2>
               <p style={styles.contactText}>
-                Select an optimization goal to customize your lead flow. Watch this form behave like an automated ManyChat sequence as you interact with it!
+                Select an optimization goal to customize your lead flow — or reach out directly right now.
               </p>
+
+              {/* Direct contact cards */}
+              <div style={styles.directContactGrid}>
+                <a
+                  href="https://wa.me/918544926441"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={styles.directContactCard}
+                  className="direct-contact-card"
+                >
+                  <div style={{ ...styles.directContactIcon, background: 'rgba(37,211,102,0.12)', color: '#25D366' }}>
+                    <i className="fa-brands fa-whatsapp"></i>
+                  </div>
+                  <div>
+                    <p style={styles.directContactLabel}>WhatsApp</p>
+                    <p style={styles.directContactValue}>+91 85449-26441</p>
+                  </div>
+                  <i className="fa-solid fa-arrow-up-right-from-square" style={styles.directContactArrow}></i>
+                </a>
+
+                <a
+                  href="mailto:jot60103@gmail.com"
+                  style={styles.directContactCard}
+                  className="direct-contact-card"
+                >
+                  <div style={{ ...styles.directContactIcon, background: 'rgba(225,48,108,0.12)', color: '#E1306C' }}>
+                    <i className="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <p style={styles.directContactLabel}>Email</p>
+                    <p style={styles.directContactValue}>jot60103@gmail.com</p>
+                  </div>
+                  <i className="fa-solid fa-arrow-up-right-from-square" style={styles.directContactArrow}></i>
+                </a>
+
+                <a
+                  href="https://drive.google.com/file/d/10BDaCvF14NrWOMfHKzajatG_sb1K9WyR/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ ...styles.directContactCard, gridColumn: '1 / -1' }}
+                  className="direct-contact-card cv-card"
+                >
+                  <div style={{ ...styles.directContactIcon, background: 'rgba(0,132,255,0.12)', color: '#0084ff' }}>
+                    <i className="fa-solid fa-file-arrow-down"></i>
+                  </div>
+                  <div>
+                    <p style={styles.directContactLabel}>Curriculum Vitae</p>
+                    <p style={styles.directContactValue}>View & Download My CV — Google Drive</p>
+                  </div>
+                  <i className="fa-solid fa-arrow-up-right-from-square" style={styles.directContactArrow}></i>
+                </a>
+              </div>
               
               <div style={styles.goalsContainer}>
                 <button
@@ -384,12 +469,38 @@ export default function App() {
 
       {/* Footer */}
       <footer style={styles.footer}>
-        <div className="container" style={styles.footerContainer}>
-          <p style={styles.footerCopy}>&copy; 2026 Amrit. All rights reserved. Created with marketing automation.</p>
-          <div style={styles.footerSocials}>
-            <a href="https://www.instagram.com/stitcherybypreet/" target="_blank" rel="noreferrer" style={styles.socialIconLink}><i className="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@techwealthcoach" target="_blank" rel="noreferrer" style={styles.socialIconLink}><i className="fa-brands fa-youtube"></i></a>
-            <a href="https://www.instagram.com/solitaireinfosystems/?hl=en" target="_blank" rel="noreferrer" style={styles.socialIconLink}><i className="fa-solid fa-link"></i></a>
+        <div className="container">
+          {/* Footer top — CV download banner */}
+          <div style={styles.footerBanner}>
+            <div style={styles.footerBannerLeft}>
+              <i className="fa-solid fa-file-arrow-down" style={{ color: '#0084ff', fontSize: '20px' }}></i>
+              <div>
+                <p style={styles.footerBannerTitle}>Want to see my full CV?</p>
+                <p style={styles.footerBannerSub}>Download it or view it on Google Drive instantly.</p>
+              </div>
+            </div>
+            <a
+              href="https://drive.google.com/file/d/10BDaCvF14NrWOMfHKzajatG_sb1K9WyR/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+              style={{ fontSize: '13px', padding: '10px 22px', flexShrink: 0 }}
+            >
+              <i className="fa-solid fa-download" style={{ marginRight: '7px' }}></i>
+              Download CV
+            </a>
+          </div>
+
+          {/* Footer bottom */}
+          <div style={styles.footerContainer}>
+            <p style={styles.footerCopy}>&copy; 2026 Amrit. All rights reserved. Built with automation &amp; AI.</p>
+            <div style={styles.footerSocials}>
+              <a href="mailto:jot60103@gmail.com" title="Email" style={styles.socialIconLink}><i className="fa-solid fa-envelope"></i></a>
+              <a href="https://wa.me/918544926441" target="_blank" rel="noreferrer" title="WhatsApp" style={{ ...styles.socialIconLink, color: '#25D366' }}><i className="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/stitcherybypreet/" target="_blank" rel="noreferrer" style={styles.socialIconLink}><i className="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@techwealthcoach" target="_blank" rel="noreferrer" style={styles.socialIconLink}><i className="fa-brands fa-youtube"></i></a>
+              <a href="https://www.instagram.com/solitaireinfosystems/?hl=en" target="_blank" rel="noreferrer" style={styles.socialIconLink}><i className="fa-solid fa-link"></i></a>
+            </div>
           </div>
         </div>
       </footer>
@@ -494,7 +605,36 @@ const styles = {
   },
   heroActionRow: {
     display: 'flex',
-    gap: '16px'
+    gap: '16px',
+    marginBottom: '24px'
+  },
+  heroContactRow: {
+    display: 'flex',
+    gap: '10px',
+    flexWrap: 'wrap',
+    marginTop: '4px'
+  },
+  heroContactPill: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '7px',
+    padding: '8px 14px',
+    borderRadius: '30px',
+    background: 'rgba(255,255,255,0.04)',
+    border: '1px solid rgba(255,255,255,0.08)',
+    color: 'var(--text-secondary)',
+    textDecoration: 'none',
+    fontSize: '13px',
+    fontWeight: '500',
+    transition: 'all 0.25s ease',
+    letterSpacing: '0.01em'
+  },
+  heroContactDot: {
+    width: '6px',
+    height: '6px',
+    borderRadius: '50%',
+    animation: 'pulse-ring 2s ease infinite',
+    flexShrink: 0
   },
   heroVisual: {
     display: 'flex',
@@ -665,6 +805,55 @@ const styles = {
     gap: '16px',
     width: '100%'
   },
+  directContactGrid: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '12px',
+    width: '100%',
+    marginBottom: '24px'
+  },
+  directContactCard: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '14px',
+    padding: '16px',
+    borderRadius: '14px',
+    background: 'rgba(255,255,255,0.03)',
+    border: '1px solid rgba(255,255,255,0.07)',
+    textDecoration: 'none',
+    color: 'var(--text-primary)',
+    transition: 'all 0.3s ease',
+    cursor: 'pointer'
+  },
+  directContactIcon: {
+    width: '40px',
+    height: '40px',
+    borderRadius: '10px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '18px',
+    flexShrink: 0
+  },
+  directContactLabel: {
+    fontSize: '11px',
+    color: 'var(--text-muted)',
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    letterSpacing: '0.06em',
+    marginBottom: '2px'
+  },
+  directContactValue: {
+    fontSize: '13px',
+    fontWeight: '600',
+    color: 'var(--text-primary)'
+  },
+  directContactArrow: {
+    marginLeft: 'auto',
+    fontSize: '11px',
+    color: 'var(--text-muted)',
+    flexShrink: 0
+  },
   goalOption: {
     display: 'flex',
     alignItems: 'center',
@@ -762,7 +951,32 @@ const styles = {
   footer: {
     background: '#040508',
     borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-    padding: '40px 0'
+    padding: '0 0 40px'
+  },
+  footerBanner: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: '20px',
+    flexWrap: 'wrap',
+    padding: '28px 0',
+    marginBottom: '28px',
+    borderBottom: '1px solid rgba(255,255,255,0.05)'
+  },
+  footerBannerLeft: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '16px'
+  },
+  footerBannerTitle: {
+    fontSize: '16px',
+    fontWeight: '700',
+    color: 'var(--text-primary)',
+    marginBottom: '2px'
+  },
+  footerBannerSub: {
+    fontSize: '13px',
+    color: 'var(--text-muted)'
   },
   footerContainer: {
     display: 'flex',

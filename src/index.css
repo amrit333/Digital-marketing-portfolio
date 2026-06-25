@@ -286,6 +286,27 @@ section {
   }
 }
 
+/* Hero contact pill hover */
+.hero-contact-pill:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* Direct contact card hover */
+.direct-contact-card:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.direct-contact-card.cv-card:hover {
+  border-color: rgba(0, 132, 255, 0.35) !important;
+  box-shadow: 0 8px 32px rgba(0, 132, 255, 0.12);
+}
+
 /* Typing indicator for ManyChat simulator */
 @keyframes typing-pulse {
   0% {
