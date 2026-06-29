@@ -1,33 +1,43 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Amrit - Digital Marketing & Automation Expert | ManyChat & AI Content Strategy</title>
-    <meta name="title" content="Amrit - Digital Marketing & Automation Expert | ManyChat & AI Content Strategy" />
-    <meta name="description" content="Digital Marketing Executive specializing in ManyChat automation, Instagram organic growth, and AI-powered content strategy. Proven track record of scaling brand pages and generating organic leads at scale." />
-
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Amrit — Digital Marketing Expert specializing in Meta Automation, AI Content Strategy, SEO, and Lead Generation. Transforming brands through data-driven strategies." />
+    <meta name="keywords" content="digital marketing, meta automation, manychat, SEO, instagram marketing, lead generation, AI content, social media, performance marketing" />
+    <meta name="author" content="Amrit" />
+    <meta property="og:title" content="Amrit | Digital Marketing Expert" />
+    <meta property="og:description" content="Premium digital marketing portfolio — automation, AI content, SEO, and growth strategies that deliver results." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Amrit - Digital Marketing & Automation Expert" />
-    <meta property="og:description" content="Instagram automation, organic lead generation, AI content strategy, and multi-page social media management." />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Amrit | Digital Marketing Expert" />
+    <meta name="twitter:description" content="Premium digital marketing portfolio showcasing real results." />
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Amrit | Digital Marketing Expert</title>
+    <!-- Noise SVG filter for premium texture -->
+    <style>
+      #noise-filter { position: fixed; width: 0; height: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <!-- SVG noise filter -->
+    <svg id="noise-filter" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="noise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noiseOut"/>
+          <feColorMatrix type="saturate" values="0" in="noiseOut" result="desaturated"/>
+          <feBlend in="SourceGraphic" in2="desaturated" mode="overlay"/>
+        </filter>
+      </defs>
+    </svg>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-</body>
-
+  </body>
 </html>
